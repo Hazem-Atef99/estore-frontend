@@ -1,13 +1,13 @@
 <div class="best-product-area lf-padding" >
     <div class="product-wrapper bg-height" style="background-image: url('assets/img/categori/card.png')">
          <div class="container position-relative">
-             <div class="row justify-content-between align-items-end">
+             <div class="row justify-content-between align-items-end" *ngFor="let item of bestproductBigPicture" >
                  <div class="product-man position-absolute  d-none d-lg-block">
-                     <img src="assets/img/categori/card-man.png" alt="">
+                     <img src={{item.imageUrl}} alt="">
                  </div>
                  <div class="col-xl-2 col-lg-2 col-md-2 d-none d-lg-block">
                      <div class="vertical-text">
-                         <span>Manz</span>
+                         <span>{{item.productName}}</span>
                      </div>
                  </div>
                  <div class="col-xl-8 col-lg-8">
@@ -21,7 +21,7 @@
          </div>
     </div>
     <!-- Shape -->
-    <div class="shape bounce-animate d-none d-md-block">
-        <img src="assets/img/categori/card-shape.png" alt="">
+    <div class="shape bounce-animate d-none d-md-block"   >
+        <img *ngFor="let item of bestproductSmallPicture" src={{item.imageUrl}} alt="">
     </div>
  </div>

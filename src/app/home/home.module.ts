@@ -33,7 +33,7 @@ import { PreloaderComponent } from '../shared/Components/preloader/preloader.com
   ],
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
   ]
 })
 export class HomeModule { }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from 'src/app/shared/product/product';
+import { SharedService } from 'src/app/shared/Service/shared.service';
 
 @Component({
   selector: 'app-slider-area',
@@ -6,10 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./slider-area.component.css']
 })
 export class SliderAreaComponent implements OnInit {
-
-  constructor() { }
+sliderProduct : Product[];
+  constructor(private sharedService:SharedService) { }
 
   ngOnInit(): void {
+    this.getsliderProduct();
   }
-
+  getsliderProduct(){
+    this.sharedService.getSliderProduct().subscribe(data=>
+     {
+      this.sliderProduct=data;
+      console.log(this.sliderProduct)
+    } );
+  }
 }

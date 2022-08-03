@@ -19,8 +19,8 @@
             </div>
         </div>
         <!-- man Shape -->
-        <div class="man-shape">
-            <img src="assets/img/collection/latest-man.png" alt="">
+        <div class="man-shape" *ngFor="let item of latestOffersProducts" >
+            <img src={{item.imageUrl}} alt="">
         </div>
     </div>
 </div>

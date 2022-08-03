@@ -5,17 +5,20 @@ import { SharedRoutingModule } from './shared-routing.module';
 import { PreloaderComponent } from './Components/preloader/preloader.component';
 import { HeaderComponent } from './Components/header/header.component';
 import { FooterComponent } from './Components/footer/footer.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
   declarations: [
     PreloaderComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    
   ],
   imports: [
     CommonModule,
-    SharedRoutingModule
+    SharedRoutingModule,
+    HttpClientModule
   ]
 })
 export class SharedModule { }
