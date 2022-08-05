@@ -4,6 +4,7 @@ import { HomeParentComponent } from './Components/home-parent/home-parent.compon
 
 const routes: Routes = [
   {path: '',component: HomeParentComponent},
+  {path: 'home',component: HomeParentComponent}
 ];
 
 @NgModule({

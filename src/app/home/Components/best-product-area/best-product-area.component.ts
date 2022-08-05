@@ -19,9 +19,9 @@ export class BestProductAreaComponent implements OnInit {
     this.getbestproductBigPicture();
   }
 getbestproductBigPicture(){
-  this.sharedService.getBestProduct().subscribe(data=>{
+  this.sharedService.getProducts().subscribe(data=>{
     for (let i = 0; i < data.length; i++) {
-      if (data[i].productName=="Manz") {
+      if (data[i].isBestProduct==true && data[i].productName=="Manz") {
         this.bestproductSmallPicture.push(data[i])
       }
       
@@ -31,9 +31,9 @@ getbestproductBigPicture(){
   })
 }
 getbestproductSmallPicture(){
-  this.sharedService.getBestProduct().subscribe(data=>{
+  this.sharedService.getProducts().subscribe(data=>{
     for (let i = 0; i < data.length; i++) {
-      if (data[i].productName=="shirts") {
+      if (data[i].isBestProduct==true && data[i].productName=="shirts") {
         this.bestproductBigPicture.push(data[i])
       }
       

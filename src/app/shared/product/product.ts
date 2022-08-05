@@ -6,6 +6,7 @@ export class Product {
     imageUrl:string;
     ImageFile:null;
     ImageName:string;
+    category:string;
     isSlider:boolean;
     isCategory:boolean;
     isLatestProduct:boolean;
@@ -13,6 +14,7 @@ export class Product {
     isBestCollection:boolean;
     isLatestOffer:boolean;
     isgallery:boolean;
-
-
+    isAddedToCart:boolean;
+    isAddedToCheckout:boolean;
+    inConfirmation:boolean;
 }

@@ -8,17 +8,20 @@ import { SharedService } from 'src/app/shared/Service/shared.service';
   styleUrls: ['./slider-area.component.css']
 })
 export class SliderAreaComponent implements OnInit {
-sliderProduct : Product[];
+sliderProduct : Product[]=[];
   constructor(private sharedService:SharedService) { }
 
   ngOnInit(): void {
     this.getsliderProduct();
   }
   getsliderProduct(){
-    this.sharedService.getSliderProduct().subscribe(data=>
+    this.sharedService.getProducts().subscribe(data=>
      {
-      this.sliderProduct=data;
-      console.log(this.sliderProduct)
+  for (let i = 0; i < data.length; i++) {
+    if(data[i].isSlider==true){
+      this.sliderProduct.push(data[i])
+    }
+  }
     } );
   }
 }

@@ -8,17 +8,23 @@ import { SharedService } from 'src/app/shared/Service/shared.service';
   styleUrls: ['./category-area.component.css']
 })
 export class CategoryAreaComponent implements OnInit {
-categoryProduct :Product[];
+categoryProduct :Product[]=[];
   constructor(private sharedService : SharedService) { }
 
   ngOnInit(): void {
 this.getCategoryProduct();
   }
   getCategoryProduct(){
-    this.sharedService.getCategoryProduct().subscribe(data =>
-      {
-        this.categoryProduct=data;
-      })
+    this.sharedService.getProducts().subscribe(data=>{
+      for (let i = 0; i < data.length; i++) {
+        if (data[i].isCategory==true) {
+          this.categoryProduct.push(data[i])
+        }
+        
+      }
+      
+   
+    })
   }
 
 }

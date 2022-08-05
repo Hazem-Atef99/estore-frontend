@@ -11,9 +11,8 @@ import { LatestOffersComponent } from './Components/latest-offers/latest-offers.
 import { ShopMethodComponent } from './Components/shop-method/shop-method.component';
 import { GalleryComponent } from './Components/gallery/gallery.component';
 import { HomeParentComponent } from './Components/home-parent/home-parent.component';
-import { FooterComponent } from '../shared/Components/footer/footer.component';
-import { HeaderComponent } from '../shared/Components/header/header.component';
-import { PreloaderComponent } from '../shared/Components/preloader/preloader.component';
+import { RouterModule } from '@angular/router';
+
 
 
 @NgModule({
@@ -27,13 +26,15 @@ import { PreloaderComponent } from '../shared/Components/preloader/preloader.com
     ShopMethodComponent,
     GalleryComponent,
     HomeParentComponent,
-    PreloaderComponent,
-    HeaderComponent,
-    FooterComponent
+ 
   ],
   imports: [
     CommonModule,
     HomeRoutingModule,
+  ],
+  exports:[
+    RouterModule,
+
   ]
 })
 export class HomeModule { }

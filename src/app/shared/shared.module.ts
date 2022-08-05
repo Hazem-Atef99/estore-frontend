@@ -6,19 +6,24 @@ import { PreloaderComponent } from './Components/preloader/preloader.component';
 import { HeaderComponent } from './Components/header/header.component';
 import { FooterComponent } from './Components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
   declarations: [
-    PreloaderComponent,
-    HeaderComponent,
-    FooterComponent,
+
     
   ],
   imports: [
     CommonModule,
     SharedRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    
+  ],
+  exports:[
+    RouterModule,
+
+  
   ]
 })
 export class SharedModule { }
