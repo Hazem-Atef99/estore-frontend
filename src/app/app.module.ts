@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { FooterComponent } from './shared/Components/footer/footer.component';
 import { HeaderComponent } from './shared/Components/header/header.component';
 import { PreloaderComponent } from './shared/Components/preloader/preloader.component';
+import { ProductListParentComponent } from './productList/Components/product-list-parent/product-list-parent.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PreloaderComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ProductListParentComponent
 
 
   ],
