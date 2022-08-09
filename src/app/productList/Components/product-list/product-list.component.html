@@ -25,9 +25,9 @@
                 <div class="product_list">
                     <div class="row">
                         <div class="col-lg-6 col-sm-6" *ngFor="let item of productList | filter:searchtext" >
-                            <div class="single_product_item">
-                                <img src={{item.imageUrl}} alt="" class="img-fluid">
-                                <h3> <a href=>{{item.productName}}</a> </h3>
+                            <div (click)="details(item)" class="single_product_item">
+                                <img  src={{item.imageUrl}} alt="" class="img-fluid">
+                                <h3> <a >{{item.productName}}</a> </h3>
                                 <p>From $5</p>
                             </div>
                         </div>

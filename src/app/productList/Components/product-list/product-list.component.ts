@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Product } from 'src/app/shared/product/product';
 import { SharedService } from 'src/app/shared/Service/shared.service';
 
@@ -12,7 +13,8 @@ export class ProductListComponent implements OnInit {
   searchtext='';
   category:string[]=[];
   tempCategory:string[]=[];
-  constructor(private sharedService:SharedService) { }
+  constructor(private sharedService:SharedService,
+              private router:Router) { }
 
   ngOnInit(): void {
     this.getProducts();
@@ -45,5 +47,8 @@ if (event.target.value=='category') {
 else{
   this.searchtext=event.target.value;
 }
+}
+details( prod:Product){
+this.router.navigateByUrl(`/ProductList/ProductDetails/${prod.productID}`);
 }
 }

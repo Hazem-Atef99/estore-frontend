@@ -10,12 +10,14 @@ import { PreloaderComponent } from './shared/Components/preloader/preloader.comp
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     PreloaderComponent,
     HeaderComponent,
     FooterComponent,
+ 
 
 
   ],

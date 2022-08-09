@@ -7,12 +7,16 @@ import { ProductListComponent } from './Components/product-list/product-list.com
 import { ProductSliderComponent } from './Components/product-slider/product-slider.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { FormsModule } from '@angular/forms';
+import { ProductDetailsComponent } from './Components/product-details/product-details.component';
+import { ProductListParentComponent } from './Components/product-list-parent/product-list-parent.component';
 
 
 @NgModule({
   declarations: [
     ProductListComponent,
-    ProductSliderComponent
+    ProductSliderComponent,
+    ProductDetailsComponent,
+    ProductListParentComponent
   ],
   imports: [
     CommonModule,

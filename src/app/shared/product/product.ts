@@ -1,9 +1,11 @@
 export class Product {
     productID:number;
     productName:string;
-    price:string;
+    price:number;
     discount:string;
     imageUrl:string;
+    productDescription:string;
+    quantity:number;
     ImageFile:null;
     ImageName:string;
     category:string;
@@ -17,4 +19,5 @@ export class Product {
     isAddedToCart:boolean;
     isAddedToCheckout:boolean;
     inConfirmation:boolean;
+    totalPrice=0;
 }
