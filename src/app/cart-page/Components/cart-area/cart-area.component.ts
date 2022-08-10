@@ -24,9 +24,6 @@ getCartProducts(){
     this.cartProducts =data;
  for (let i = 0; i < this.cartProducts.length; i++) {
   this.cartProducts[i].totalPrice=this.cartProducts[i].price*this.cartProducts[i].quantity;
-  //  let tempTotal= this.cartProducts[i].totalPrice;
-  //  this.subTotal+=tempTotal;
-
 }
 this.subTotal = this.cartProducts.reduce(function(prev, cur) {
   return prev + cur.totalPrice;
